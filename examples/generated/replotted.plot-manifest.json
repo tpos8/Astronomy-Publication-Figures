@@ -1,0 +1,26 @@
+{
+  "kind": "phase_folded",
+  "journal": "MNRAS",
+  "input": "examples/generated/synthetic_lightcurve.csv",
+  "input_columns": {
+    "x": "phase",
+    "y": "flux",
+    "yerr": "flux_err",
+    "model": "model_flux"
+  },
+  "n_points": 200,
+  "transformations": [
+    "none; retained raw CSV numeric values"
+  ],
+  "derived_display_values": [
+    "O-C = observed - supplied model"
+  ],
+  "notes": [
+    "Printed column width is audited separately.",
+    "Flux/error/phase/time provenance must be verified from source data."
+  ],
+  "outputs": [
+    "examples/generated/replotted.pdf",
+    "examples/generated/replotted.png"
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": "2.0",
+  "evidence_tier": "COMMUNITY_CONVENTION",
+  "base_fields": [
+    "domain",
+    "figure_kind",
+    "representation",
+    "source_files",
+    "units"
+  ],
+  "profiles": {
+    "radio": {
+      "review_fields": [
+        "coordinate_frame",
+        "wcs_verified",
+        "observing_frequency_hz",
+        "beam",
+        "noise",
+        "processing",
+        "uncertainties"
+      ],
+      "reminders": [
+        "Jy/beam is not integrated Jy",
+        "contour levels need measured noise or explicit values",
+        "velocity frame and convention for line cubes"
+      ]
+    },
+    "mm_submm": {
+      "review_fields": [
+        "coordinate_frame",
+        "wcs_verified",
+        "beam",
+        "noise",
+        "processing"
+      ],
+      "reminders": [
+        "rest frequency and velocity convention for spectral lines"
+      ]
+    },
+    "xray": {
+      "review_fields": [
+        "instrument",
+        "energy_band",
+        "exposure",
+        "background",
+        "response",
+        "statistic",
+        "uncertainties",
+        "processing"
+      ],
+      "reminders": [
+        "folded count model differs from unfolded energy spectrum"
+      ]
+    },
+    "gamma": {
+      "review_fields": [
+        "instrument",
+        "energy_band",
+        "exposure",
+        "background",
+        "upper_limits",
+        "statistic",
+        "uncertainties"
+      ],
+      "reminders": [
+        "upper-limit confidence levels; TS is not automatically sigma"
+      ]
+    },
+    "infrared": {
+      "review_fields": [
+        "instrument",
+        "spectral_frame",
+        "calibration",
+        "uncertainties"
+      ],
+      "reminders": [
+        "F_lambda versus F_nu; AB versus Vega"
+      ]
+    },
+    "optical": {
+      "review_fields": [
+        "instrument",
+        "calibration",
+        "time_standard",
+        "uncertainties"
+      ],
+      "reminders": [
+        "do not infer orbital phase from unknown ephemeris"
+      ]
+    },
+    "ultraviolet": {
+      "review_fields": [
+        "instrument",
+        "calibration",
+        "spectral_frame",
+        "uncertainties"
+      ],
+      "reminders": [
+        "air/vacuum conventions and extinction correction"
+      ]
+    },
+    "solar": {
+      "review_fields": [
+        "instrument",
+        "coordinate_frame",
+        "observer",
+        "observation_time",
+        "passband",
+        "wcs_verified"
+      ],
+      "reminders": [
+        "do not use RA/Dec for helioprojective axes"
+      ]
+    },
+    "cosmology": {
+      "review_fields": [
+        "coordinate_frame",
+        "projection",
+        "mask",
+        "units",
+        "processing"
+      ],
+      "reminders": [
+        "HEALPix ordering and C_l vs D_l if applicable"
+      ]
+    },
+    "gravitational_wave": {
+      "review_fields": [
+        "detector",
+        "time_standard",
+        "sampling",
+        "quantity_definition",
+        "processing",
+        "uncertainties"
+      ],
+      "reminders": [
+        "ASD vs PSD vs h(t) not interchangeable"
+      ]
+    },
+    "neutrino": {
+      "review_fields": [
+        "instrument",
+        "coordinate_frame",
+        "exposure",
+        "statistic",
+        "uncertainties"
+      ],
+      "reminders": [
+        "sky localizations need credible region provenance"
+      ]
+    },
+    "multiwavelength": {
+      "review_fields": [
+        "coordinate_frame",
+        "wcs_verified",
+        "registration",
+        "resolution_matching",
+        "observation_epochs",
+        "calibration",
+        "uncertainties"
+      ],
+      "reminders": [
+        "cross-band map overlay must use WCS transformation"
+      ]
+    },
+    "theoretical": {
+      "review_fields": [
+        "model",
+        "parameter_units",
+        "snapshot",
+        "uncertainties"
+      ],
+      "reminders": [
+        "simulated values are not observed measurements"
+      ]
+    },
+    "planetary": {
+      "review_fields": [
+        "target_body",
+        "coordinate_frame",
+        "projection",
+        "longitude_convention",
+        "observation_time",
+        "units",
+        "processing"
+      ],
+      "reminders": [
+        "positive-east versus west longitude; planetocentric versus planetographic latitude"
+      ]
+    },
+    "astrometry": {
+      "review_fields": [
+        "coordinate_frame",
+        "reference_epoch",
+        "uncertainties",
+        "selection",
+        "units"
+      ],
+      "reminders": [
+        "proper motion cos(declination), astrometric covariance, parallax versus distance"
+      ]
+    }
+  }
+}

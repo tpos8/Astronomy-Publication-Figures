@@ -1,0 +1,64 @@
+{
+  "generic": {
+    "source": null,
+    "verified_as_of": "2026-10-08",
+    "single_column_mm": null,
+    "default_width_mm": 88.0,
+    "min_font_pt_official": null,
+    "approx_font_pt_official": null,
+    "min_line_pt_official": null,
+    "raster_dpi_official": null,
+    "alt_text_required": null,
+    "notes": "Generic 88 mm is HOUSE_DEFAULT only; check manuscript template."
+  },
+  "AAS": {
+    "source": "https://journals.aas.org/graphics-guide/",
+    "verified_as_of": "2026-10-08",
+    "single_column_mm": null,
+    "default_width_mm": 88.0,
+    "min_font_pt_official": 6.0,
+    "approx_font_pt_official": null,
+    "min_line_pt_official": 0.5,
+    "raster_dpi_official": {"general": 300},
+    "alt_text_required": null,
+    "notes": "PDF/EPS preferred; 1000 px horizontal guideline; single-page figure; column width here is HOUSE_DEFAULT."
+  },
+  "MNRAS": {
+    "source": "https://academic.oup.com/mnras/pages/general_instructions",
+    "verified_as_of": "2026-10-08",
+    "single_column_mm": 84.0,
+    "default_width_mm": 84.0,
+    "min_font_pt_official": null,
+    "approx_font_pt_official": 8.0,
+    "min_line_pt_official": 0.3,
+    "raster_dpi_official": {"generic_bitmap": 400, "tiff_grayscale_halftone": 300, "tiff_mixed_line_tone": 800},
+    "alt_text_required": true,
+    "notes": "EPS preferred; PDF/TIFF accepted. 8 pt is final-size approximation, not absolute minimum."
+  },
+  "A&A": {
+    "source": "https://www.aanda.org/doc_journal/instructions/aadoc.pdf",
+    "verified_as_of": "2026-10-08",
+    "single_column_mm": 88.0,
+    "double_column_max_mm": 180.0,
+    "side_caption_max_mm": 120.0,
+    "default_width_mm": 88.0,
+    "min_font_pt_official": null,
+    "approx_font_pt_official": null,
+    "min_line_pt_official": null,
+    "raster_dpi_official": null,
+    "alt_text_required": null,
+    "notes": "Official PDF full-text fetch was blocked; sizes from indexed author PDF/historical guide; reverify against latest."
+  },
+  "RAA": {
+    "source": "https://www.raa-journal.org/sub/",
+    "verified_as_of": "2026-10-08",
+    "single_column_mm": null,
+    "default_width_mm": 88.0,
+    "min_font_pt_official": null,
+    "approx_font_pt_official": null,
+    "min_line_pt_official": null,
+    "raster_dpi_official": null,
+    "alt_text_required": null,
+    "notes": "PS preferred, high-quality sharp lines/labels; 88 mm here is HOUSE_DEFAULT, not official."
+  }
+}

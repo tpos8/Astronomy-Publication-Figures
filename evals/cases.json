@@ -1,0 +1,266 @@
+[
+  {
+    "id": "raa-real-tess-lc",
+    "input": "使用 RAA 标准改进我已有的 TESS PDCSAP 光变图，保持 QUALITY 清洗逻辑和真实时间不变。",
+    "must_do": [
+      "inspect current code and data",
+      "preserve scientific processing",
+      "RAA source vs house defaults",
+      "export actual PDF",
+      "visual + structural audit"
+    ],
+    "must_not_do": [
+      "assert RAA mandates 8 pt",
+      "recompute periods unasked",
+      "fabricate flux points"
+    ]
+  },
+  {
+    "id": "mnras-alt-text",
+    "input": "按 MNRAS 准备光变拟合和残差图，提供图注。",
+    "must_do": [
+      "follow 84 mm single-column when appropriate",
+      "label residual convention",
+      "provide separate Alt text:",
+      "verify final width"
+    ],
+    "must_not_do": [
+      "treat 8 pt as absolute mandatory minimum",
+      "claim four-side ticks are universally mandated"
+    ]
+  },
+  {
+    "id": "phase-pdot",
+    "input": "把时间序列修正为相位，已知 Porb 和 Pdot，但没给 T0。",
+    "must_do": [
+      "ask for ephemeris reference T0 and convention",
+      "do not invent missing ephemeris"
+    ],
+    "must_not_do": [
+      "assume time zero",
+      "silently use linear ephemeris"
+    ]
+  },
+  {
+    "id": "asymmetry-preservation",
+    "input": "不同 sector 的最小值看着很不平滑，画得好看一点。",
+    "must_do": [
+      "retain genuine astrophysical variability",
+      "distinguish display-only changes from statistical processing",
+      "reveal sector preprocessing"
+    ],
+    "must_not_do": [
+      "discard high-variance sectors",
+      "smooth away physical asymmetry"
+    ]
+  },
+  {
+    "id": "aa-rule-uncertainty",
+    "input": "A&A 官方是不是强制 PDF 线宽 0.5 pt 和 Arial 8 pt?",
+    "must_do": [
+      "explain verification limits",
+      "distinguish unsupported claims from style recommendations",
+      "provide official guide link"
+    ],
+    "must_not_do": [
+      "invent mandatory numerical A&A thresholds"
+    ]
+  },
+  {
+    "id": "gls-significance",
+    "input": "请给周期图加 1% FAP 线，但我还没计算 FAP。",
+    "must_do": [
+      "request validated FAP calculation or data",
+      "do not synthesize significance"
+    ],
+    "must_not_do": [
+      "draw a guessed horizontal significance line"
+    ]
+  },
+  {
+    "id": "rv-phoebe",
+    "input": "我有三组仪器的 RV 和 PHOEBE 模型，创建观测+模型和 O-C 图。",
+    "must_do": [
+      "instrument markers/legend",
+      "velocity units",
+      "paired residual sign",
+      "explicit systemic velocity treatment",
+      "preserve instrument offsets"
+    ],
+    "must_not_do": [
+      "fit a sine model unless requested",
+      "invent instrumental corrections"
+    ]
+  },
+  {
+    "id": "inspect-only",
+    "input": "只检查现有 PDF，不要改动。",
+    "must_do": [
+      "audit actual files",
+      "leave originals intact",
+      "distinguish automatic PASS from manual UNKNOWN"
+    ],
+    "must_not_do": [
+      "overwrite PDFs",
+      "certify astrophysical truth without source data"
+    ]
+  },
+  {
+    "id": "radio-contours-no-rms",
+    "input": "画 ALMA 1.3mm 连续谱等值线图，噪声暂时不知道，默认 3σ、5σ、7σ 吧。",
+    "must_do": [
+      "check BUNIT and beam/WCS",
+      "ask for validated RMS or explicit contour levels",
+      "label unknown noise"
+    ],
+    "must_not_do": [
+      "invent RMS",
+      "make up 3 sigma threshold"
+    ]
+  },
+  {
+    "id": "radio-jy-beam",
+    "input": "把 Jy/beam 射电图的 colorbar 标成总流量 Jy 吧",
+    "must_do": [
+      "preserve Jy/beam physical meaning",
+      "distinguish integrated flux vs surface brightness"
+    ],
+    "must_not_do": [
+      "change BUNIT by styling"
+    ]
+  },
+  {
+    "id": "radio-cube-slice",
+    "input": "给我的四维 ALMA FITS cube 做第一个 channel 的图，无需核对轴顺序",
+    "must_do": [
+      "inspect FITS axis order and spectral frame",
+      "require physically defined Stokes/channel plane",
+      "document selection"
+    ],
+    "must_not_do": [
+      "blindly apply data[0,0]"
+    ]
+  },
+  {
+    "id": "radio-velocity-convention",
+    "input": "把 21cm 频率轴自动换成 km/s，没有 RESTFRQ 和 frame",
+    "must_do": [
+      "require rest frequency and velocity/frame convention"
+    ],
+    "must_not_do": [
+      "silently use one Doppler formula"
+    ]
+  },
+  {
+    "id": "xray-counts-flux",
+    "input": "把 XMM-Newton 的 counts/s 直接改名为 erg/s/cm2 就能发表",
+    "must_do": [
+      "distinguish count rate and physical energy flux",
+      "require response and calibrated flux estimation"
+    ],
+    "must_not_do": [
+      "relabel count rates as flux"
+    ]
+  },
+  {
+    "id": "xray-response-residual",
+    "input": "为 XSPEC C-stat 结果画计数谱和 unfolded spectrum，附带残差",
+    "must_do": [
+      "separate count-space forward folded model from unfolded representation",
+      "retain C-stat/response/background provenance",
+      "label residual definition"
+    ],
+    "must_not_do": [
+      "claim unfolded bins independent if XSPEC ufspec used"
+    ]
+  },
+  {
+    "id": "gamma-upper-limit",
+    "input": "Fermi SED 的 95% upper limit 能不能画成有对称误差棒的探测点",
+    "must_do": [
+      "use distinct limit marker",
+      "state confidence level",
+      "avoid residuals calculated for censored points"
+    ],
+    "must_not_do": [
+      "promote nondetection to detection"
+    ]
+  },
+  {
+    "id": "solar-wcs",
+    "input": "给 SDO AIA 的太阳图叠加通用 RA/Dec 坐标轴",
+    "must_do": [
+      "load SunPy-aware solar coordinate convention",
+      "check observer and obstime"
+    ],
+    "must_not_do": [
+      "assume RA/Dec is natural solar map frame"
+    ]
+  },
+  {
+    "id": "cmb-ring-nested",
+    "input": "把 HEALPix RING 的一维数组 reshape 成矩形然后当做全天图",
+    "must_do": [
+      "use HEALPix native projection",
+      "respect RING/NESTED and NSIDE"
+    ],
+    "must_not_do": [
+      "arbitrary reshape"
+    ]
+  },
+  {
+    "id": "gw-psd-asd",
+    "input": "把 LIGO strain ASD 的 ylabel 改成 PSD 不用动数据",
+    "must_do": [
+      "explain PSD vs ASD squared unit difference",
+      "require scientifically valid conversion"
+    ],
+    "must_not_do": [
+      "rename ASD as PSD"
+    ]
+  },
+  {
+    "id": "multiband-wcs",
+    "input": "两个天文图尺寸都是 512×512，射电 contours 直接画在光学图同样的像素上吧",
+    "must_do": [
+      "verify WCS alignment and resolution",
+      "require justified reprojection or coordinate transform"
+    ],
+    "must_not_do": [
+      "assume matching array shape implies matching sky coordinates"
+    ]
+  },
+  {
+    "id": "optical-air-vacuum",
+    "input": "把气波长的线中心画在真空波长的光谱上，轴标签保持 λ(Å)",
+    "must_do": [
+      "check air/vacuum and line IDs",
+      "specify conversion if approved"
+    ],
+    "must_not_do": [
+      "overlay unconverted rest wavelengths"
+    ]
+  },
+  {
+    "id": "astropy-fits-cube-reject",
+    "input": "运行通用 fits_plot 工具绘制无切片信息的三维 FITS",
+    "must_do": [
+      "fail closed if dimensionality is >2",
+      "avoid choosing arbitrary plane"
+    ],
+    "must_not_do": [
+      "assume zeroth channel equals meaningful science plane"
+    ]
+  },
+  {
+    "id": "publication-rules-separate",
+    "input": "既然 MNRAS 期刊规定了 Jy/beam，就给所有图这么写",
+    "must_do": [
+      "separate journal formatting from interferometer science units",
+      "explain domain convention"
+    ],
+    "must_not_do": [
+      "misattribute scientific conventions to publisher"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Astronomy Publication Figures"
+  short_description: "跨全波段的天文学科研绘图、论文规范与科学真实性审查"
+  default_prompt: "Use $astronomy-publication-figures to identify this astronomy data product and domain first, then create or audit a journal-ready figure while preserving calibration, coordinates, units, errors, backgrounds, responses and provenance."
